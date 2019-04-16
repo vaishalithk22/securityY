@@ -1,4 +1,4 @@
-package com.securex.api.model.user;
+package com.securex.api.security;
 
 import org.springframework.http.HttpStatus;
 
@@ -11,7 +11,15 @@ public class AuthToken {
 
     }
 
-    public AuthToken(String token){
+    public HttpStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(HttpStatus status) {
+		this.status = status;
+	}
+
+	public AuthToken(String token){
         this.token = token;
     }
 

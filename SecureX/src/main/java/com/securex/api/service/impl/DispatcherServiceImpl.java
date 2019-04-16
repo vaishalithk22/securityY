@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 
 import com.securex.api.dao.CompanyDao;
 import com.securex.api.dao.DispatcherDao;
-import com.securex.api.model.dispatcher.Dispatcher;
-import com.securex.api.model.dispatcher.DispatcherDto;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Dispatcher;
+import com.securex.api.request.DispatcherRequest;
+import com.securex.api.security.UserCredentials;
 import com.securex.api.service.DispatcherService;
 @Service
 public class DispatcherServiceImpl implements DispatcherService {
@@ -22,7 +22,7 @@ public class DispatcherServiceImpl implements DispatcherService {
 	
 	
 	@Override
-	public Dispatcher saveDipatcher(DispatcherDto dispatcherdata, UserCredentials user) {
+	public Dispatcher saveDipatcher(DispatcherRequest dispatcherdata, UserCredentials user) {
 		// TODO Auto-generated method stub
 		Date date= new Date(); 
 		long time = date.getTime();

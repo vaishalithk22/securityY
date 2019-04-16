@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.securex.api.dao.CompanyDao;
-import com.securex.api.model.company.Company;
+import com.securex.api.model.Company;
 import com.securex.api.service.CompanyService;
 @Service
 public class CompanyServiceImpl implements CompanyService {

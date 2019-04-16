@@ -1,4 +1,4 @@
-package com.securex.api.model.security;
+package com.securex.api.config;
 
 public class Constants {
 

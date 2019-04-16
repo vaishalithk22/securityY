@@ -1,22 +1,20 @@
-package com.securex.api.model.guard;
+package com.securex.api.request;
 
-public class GuardDto
+public class AdminRequest
 {
 	private String username;
     private String password;
-	
 	
     private String firstname;
 	
     private String lastname;
 	
-	
     private String photoUrl;
 	
     private String phone;
+	
+	private String companyName;
 
-    private String companyName;
-    
 	public String getUsername() {
 		return username;
 	}
@@ -31,14 +29,6 @@ public class GuardDto
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getCompanyName() {
-		return companyName;
-	}
-
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
 	}
 
 	public String getFirstname() {
@@ -72,6 +62,14 @@ public class GuardDto
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-    
-    
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+	
+	
 }

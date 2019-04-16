@@ -1,6 +1,6 @@
-package com.securex.api.model.dispatcher;
+package com.securex.api.request;
 
-public class DispatcherDto
+public class DispatcherRequest
 {
 	private String username;
     private String password;

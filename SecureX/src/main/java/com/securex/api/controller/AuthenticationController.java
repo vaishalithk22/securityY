@@ -1,6 +1,6 @@
 package com.securex.api.controller;
 
-import static com.securex.api.model.security.Constants.TOKEN_PREFIX;
+import static com.securex.api.config.Constants.TOKEN_PREFIX;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +12,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import com.securex.api.config.TokenProvider;
-import com.securex.api.model.user.AuthToken;
-import com.securex.api.model.user.LoginUser;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.security.AuthToken;
+import com.securex.api.security.LoginUser;
+import com.securex.api.security.UserCredentials;
 import com.securex.api.service.UserService;
 
 @CrossOrigin(origins = "*", maxAge = 3600)

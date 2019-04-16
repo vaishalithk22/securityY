@@ -1,10 +1,10 @@
 package com.securex.api.service;
 
-import com.securex.api.model.admin.AdminDto;
-import com.securex.api.model.customer.CustomerDto;
-import com.securex.api.model.dispatcher.DispatcherDto;
-import com.securex.api.model.guard.GuardDto;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.request.AdminRequest;
+import com.securex.api.request.CustomerRequest;
+import com.securex.api.request.DispatcherRequest;
+import com.securex.api.request.GuardRequest;
+import com.securex.api.security.UserCredentials;
 
 public interface UserService {
 
@@ -14,9 +14,9 @@ public interface UserService {
 //    UserCredentials findOne(String username);
 
    // UserCredentials findById(Long id);
-	UserCredentials saveCredentials(CustomerDto customerdata);
-	UserCredentials saveCredentials(GuardDto guarddata);
-	UserCredentials saveCredentials(AdminDto admindata);
-	UserCredentials saveCredentials(DispatcherDto dispatcherdata);
+	UserCredentials saveCredentials(CustomerRequest customerdata);
+	UserCredentials saveCredentials(GuardRequest guarddata);
+	UserCredentials saveCredentials(AdminRequest admindata);
+	UserCredentials saveCredentials(DispatcherRequest dispatcherdata);
 	
 }

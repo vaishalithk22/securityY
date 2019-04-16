@@ -15,8 +15,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static com.securex.api.model.security.Constants.HEADER_STRING;
-import static com.securex.api.model.security.Constants.TOKEN_PREFIX;
+import static com.securex.api.config.Constants.HEADER_STRING;
+import static com.securex.api.config.Constants.TOKEN_PREFIX;
 
 import java.io.IOException;
 

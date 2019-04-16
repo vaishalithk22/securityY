@@ -1,4 +1,4 @@
-package com.securex.api.model.customer;
+package com.securex.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.security.UserCredentials;
 
 @Entity
 public class Customer 
@@ -32,8 +32,6 @@ public class Customer
 	    private String city;
 	 @Column
 	    private String state;
-	 @Column
-	    private String country;
 	 @Column
 	    private String zipcode;
 	 @Column

@@ -1,4 +1,4 @@
-package com.securex.api.model.user;
+package com.securex.api.security;
 public class LoginUser {
 
     private String username;

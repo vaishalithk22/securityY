@@ -1,4 +1,4 @@
-package com.securex.api.model.admin;
+package com.securex.api.model;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -10,11 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.securex.api.model.company.Company;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.security.UserCredentials;
 
 @Entity
-public class Administrator 
+public class Dispatcher 
 {
 	@Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -25,11 +24,11 @@ public class Administrator
 	@Column
     private String lastname;
 	@Column
-    private String photourl;
+    private String photoUrl;
 	@Column
     private String phone;
 	@Basic
-    private java.sql.Timestamp joiningdate;
+    private java.sql.Timestamp joiningDate;
 	
 	@OneToOne(fetch = FetchType.EAGER)
  	@JoinColumn(name = "company_id", nullable = false) 
@@ -64,11 +63,11 @@ public class Administrator
 	}
 
 	public String getPhotoUrl() {
-		return photourl;
+		return photoUrl;
 	}
 
 	public void setPhotoUrl(String photoUrl) {
-		this.photourl = photoUrl;
+		this.photoUrl = photoUrl;
 	}
 
 	public String getPhone() {
@@ -80,11 +79,11 @@ public class Administrator
 	}
 
 	public java.sql.Timestamp getJoiningDate() {
-		return joiningdate;
+		return joiningDate;
 	}
 
 	public void setJoiningDate(java.sql.Timestamp joiningDate) {
-		this.joiningdate = joiningDate;
+		this.joiningDate = joiningDate;
 	}
 
 	public Company getCompany() {

@@ -9,12 +9,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.securex.api.dao.UserDao;
-import com.securex.api.model.admin.AdminDto;
-import com.securex.api.model.customer.CustomerDto;
-import com.securex.api.model.dispatcher.DispatcherDto;
-import com.securex.api.model.guard.GuardDto;
-import com.securex.api.model.user.Role;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.request.AdminRequest;
+import com.securex.api.request.CustomerRequest;
+import com.securex.api.request.DispatcherRequest;
+import com.securex.api.request.GuardRequest;
+import com.securex.api.security.Role;
+import com.securex.api.security.UserCredentials;
 import com.securex.api.service.UserService;
 
 import java.util.*;
@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserDetailsService,UserService {
 	
 
 	@Override
-	public UserCredentials saveCredentials(CustomerDto customerdata) {
+	public UserCredentials saveCredentials(CustomerRequest customerdata) {
 		// TODO Auto-generated method stub
 		UserCredentials user= new UserCredentials();
 		user.setUsername(customerdata.getUsername());
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserDetailsService,UserService {
 	}
 
 	@Override
-	public UserCredentials saveCredentials(GuardDto guarddata) {
+	public UserCredentials saveCredentials(GuardRequest guarddata) {
 		// TODO Auto-generated method stub
 		UserCredentials user= new UserCredentials();
 		user.setUsername(guarddata.getUsername());
@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserDetailsService,UserService {
 	}
 
 	@Override
-	public UserCredentials saveCredentials(AdminDto admindata) {
+	public UserCredentials saveCredentials(AdminRequest admindata) {
 		// TODO Auto-generated method stub
 		UserCredentials user= new UserCredentials();
 		user.setUsername(admindata.getUsername());
@@ -87,7 +87,7 @@ public class UserServiceImpl implements UserDetailsService,UserService {
 	}
 
 	@Override
-	public UserCredentials saveCredentials(DispatcherDto dispatcherdata) {
+	public UserCredentials saveCredentials(DispatcherRequest dispatcherdata) {
 		// TODO Auto-generated method stub
 		UserCredentials user= new UserCredentials();
 		user.setUsername(dispatcherdata.getUsername());
@@ -97,32 +97,4 @@ public class UserServiceImpl implements UserDetailsService,UserService {
 		user.setRoles(roles);
 		return userDao.save(user);	}
 
-//	public List<UserCredentials> findAll() {
-//		List<UserCredentials> list = new ArrayList<>();
-//		userDao.findAll().iterator().forEachRemaining(list::add);
-//		return list;
-//	}
-
-//	@Override
-//	public void delete(long id) {
-//		userDao.deleteById(id);
-//	}
-//
-//	@Override
-//	public User findOne(String username) {
-//		return userDao.findByUsername(username);
-//	}
-//
-//	@Override
-//	public User findById(Long id) {
-//		return userDao.findById(id).get();
-//	}
-//
-//	@Override
-//    public User saveCredentials(UserDto user) {
-//	    User newUser = new User();
-//	    newUser.setUsername(user.getUsername());
-//	    newUser.setPassword(bcryptEncoder.encode(user.getPassword()));
-//        return userDao.save(newUser);
-//    }
 }

@@ -1,6 +1,6 @@
-package com.securex.api.model.customer;
+package com.securex.api.request;
 
-public class CustomerDto 
+public class CustomerRequest 
 {
 	private String username;
     private String password;
@@ -15,8 +15,6 @@ public class CustomerDto
 	    private String city;
 	 
 	    private String state;
-	 
-	    private String country;
 	 
 	    private String zipcode;
 	 
@@ -86,14 +84,6 @@ public class CustomerDto
 
 		public void setState(String state) {
 			this.state = state;
-		}
-
-		public String getCountry() {
-			return country;
-		}
-
-		public void setCountry(String country) {
-			this.country = country;
 		}
 
 		public String getZipcode() {

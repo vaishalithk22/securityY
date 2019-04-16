@@ -1,4 +1,4 @@
-package com.securex.api.model.user;
+package com.securex.api.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 //import com.securex.api.model.admindispatcher.Admin;

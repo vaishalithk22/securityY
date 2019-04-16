@@ -1,12 +1,12 @@
 package com.securex.api.service;
 
-import com.securex.api.model.customer.Customer;
-import com.securex.api.model.customer.CustomerDto;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Customer;
+import com.securex.api.request.CustomerRequest;
+import com.securex.api.security.UserCredentials;
 
 public interface CustomerService 
 {
-		Customer saveCustomer(CustomerDto customer,UserCredentials user);
+		Customer saveCustomer(CustomerRequest customer,UserCredentials user);
 	/*
 	 * List<Customer> findAll(); void delete(long id); Customer findOne(String
 	 * customername);

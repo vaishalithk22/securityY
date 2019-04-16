@@ -1,6 +1,6 @@
-package com.securex.api.model.company;
+package com.securex.api.request;
 
-public class CompanyDto 
+public class CompanyRequest 
 {
 	 private String name;
 

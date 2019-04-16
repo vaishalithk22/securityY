@@ -8,11 +8,11 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.security.UserCredentials;
 
-import static com.securex.api.model.security.Constants.ACCESS_TOKEN_VALIDITY_SECONDS;
-import static com.securex.api.model.security.Constants.AUTHORITIES_KEY;
-import static com.securex.api.model.security.Constants.SIGNING_KEY;
+import static com.securex.api.config.Constants.ACCESS_TOKEN_VALIDITY_SECONDS;
+import static com.securex.api.config.Constants.AUTHORITIES_KEY;
+import static com.securex.api.config.Constants.SIGNING_KEY;
 
 import java.io.Serializable;
 import java.util.Arrays;

@@ -1,6 +1,6 @@
 package com.securex.api.service;
 
-import com.securex.api.model.company.Company;
+import com.securex.api.model.Company;
 
 public interface CompanyService 
 {

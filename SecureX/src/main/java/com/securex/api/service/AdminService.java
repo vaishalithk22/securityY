@@ -1,10 +1,10 @@
 package com.securex.api.service;
 
-import com.securex.api.model.admin.AdminDto;
-import com.securex.api.model.admin.Administrator;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Administrator;
+import com.securex.api.request.AdminRequest;
+import com.securex.api.security.UserCredentials;
 
 public interface AdminService 
 {
-	Administrator saveAdmin(AdminDto admin,UserCredentials user);
+	Administrator saveAdmin(AdminRequest admin,UserCredentials user);
 }

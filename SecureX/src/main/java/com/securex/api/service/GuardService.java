@@ -1,11 +1,11 @@
 package com.securex.api.service;
 
-import com.securex.api.model.guard.Guard;
-import com.securex.api.model.guard.GuardDto;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Guard;
+import com.securex.api.request.GuardRequest;
+import com.securex.api.security.UserCredentials;
 
 public interface GuardService 
 {
-	Guard saveGuard(GuardDto guard, UserCredentials user);
+	Guard saveGuard(GuardRequest guard, UserCredentials user);
 	Guard register(String activationcode);
 }

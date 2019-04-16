@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.securex.api.dao.CompanyDao;
 import com.securex.api.dao.GuardDao;
-import com.securex.api.model.guard.Guard;
-import com.securex.api.model.guard.GuardDto;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Guard;
+import com.securex.api.request.GuardRequest;
+import com.securex.api.security.UserCredentials;
 import com.securex.api.service.GuardService;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -21,7 +21,7 @@ public class GuardServiceImpl implements GuardService
 	@Autowired
 	private CompanyDao companydao;
 	@Override
-	public Guard saveGuard(GuardDto guardData , UserCredentials user) {
+	public Guard saveGuard(GuardRequest guardData , UserCredentials user) {
 		// TODO Auto-generated method stub
 		Date date= new Date(); 
 		long time = date.getTime();

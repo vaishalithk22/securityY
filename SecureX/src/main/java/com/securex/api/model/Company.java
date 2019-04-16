@@ -1,4 +1,4 @@
-package com.securex.api.model.company;
+package com.securex.api.model;
 
 import java.util.Set;
 
@@ -11,9 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-
-import com.securex.api.model.admin.Administrator;
-import com.securex.api.model.guard.Guard;
 
 @Entity
 public class Company 

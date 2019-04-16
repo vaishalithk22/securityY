@@ -1,9 +1,9 @@
 package com.securex.api.service;
 
-import com.securex.api.model.dispatcher.Dispatcher;
-import com.securex.api.model.dispatcher.DispatcherDto;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Dispatcher;
+import com.securex.api.request.DispatcherRequest;
+import com.securex.api.security.UserCredentials;
 
 public interface DispatcherService {
-	Dispatcher saveDipatcher(DispatcherDto dispatcher,UserCredentials user);
+	Dispatcher saveDipatcher(DispatcherRequest dispatcher,UserCredentials user);
 }

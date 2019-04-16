@@ -1,4 +1,4 @@
-package com.securex.api.model.guard;
+package com.securex.api.model;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -11,8 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
-import com.securex.api.model.company.Company;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.security.UserCredentials;
 @Entity
 public class Guard 
 {

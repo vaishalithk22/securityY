@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.securex.api.dao.AdminDao;
 import com.securex.api.dao.CompanyDao;
-import com.securex.api.model.admin.AdminDto;
-import com.securex.api.model.admin.Administrator;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Administrator;
+import com.securex.api.request.AdminRequest;
+import com.securex.api.security.UserCredentials;
 import com.securex.api.service.AdminService;
 @Service("adminService")
 public class AdminServiceImpl implements AdminService
@@ -20,7 +20,7 @@ public class AdminServiceImpl implements AdminService
 	private CompanyDao companydao;
 	
 	@Override
-	public Administrator saveAdmin(AdminDto adminData , UserCredentials user) {
+	public Administrator saveAdmin(AdminRequest adminData , UserCredentials user) {
 		// TODO Auto-generated method stub
 		Date date= new Date(); 
 		long time = date.getTime();

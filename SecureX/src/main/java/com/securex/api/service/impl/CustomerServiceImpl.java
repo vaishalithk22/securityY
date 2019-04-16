@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.securex.api.dao.CustomerDao;
-import com.securex.api.model.customer.Customer;
-import com.securex.api.model.customer.CustomerDto;
-import com.securex.api.model.user.UserCredentials;
+import com.securex.api.model.Customer;
+import com.securex.api.request.CustomerRequest;
+import com.securex.api.security.UserCredentials;
 import com.securex.api.service.CustomerService;
 @Service
 public class CustomerServiceImpl implements CustomerService
@@ -15,7 +15,7 @@ public class CustomerServiceImpl implements CustomerService
 	@Autowired
 	private CustomerDao customerdao;
 	@Override
-	public Customer saveCustomer(CustomerDto customerdata , UserCredentials user) {
+	public Customer saveCustomer(CustomerRequest customerdata , UserCredentials user) {
 		// TODO Auto-generated method stub
 		
 		Customer customer= new Customer();
@@ -32,43 +32,4 @@ public class CustomerServiceImpl implements CustomerService
 		
 		return customerdao.save(customer);
 	}
-
-//	@Override
-//	public UserCredentials saveCredentials(CustomerDto customerdata) {
-//		// TODO Auto-generated method stub
-//		UserCredentials user= new UserCredentials();
-//		user.setUsername(customerdata.getUsername());
-//		user.setPassword(bcryptEncoder.encode(customerdata.getPassword()));
-//		Set<Role> roles= new HashSet<>();
-//		roles.add(new Role(1,"CUSTOMER","Customer role"));
-//		user.setRoles(roles);
-//		return userdao.save(user);
-//	}
-	
-//	@Override
-//	public List<UserCredentials> findAll() {
-//		List<UserCredentials> list = new ArrayList<>();
-//		userdao.findAll().iterator().forEachRemaining(list::add);
-//		return list;
-//	}
-//
-//	@Override
-//	public void delete(long id) {
-//		userdao.deleteById(id);
-//	}
-//
-//	@Override
-//	public UserCredentials findOne(String username) {
-//		return userdao.findByUsername(username);
-//	}
-//
-//	@Override
-//	public UserCredentials findById(Long id) {
-//		return userdao.findById(id).get();
-//	}
-
-	
-	
-	
-	
 }
